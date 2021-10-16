@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ph-dev - Learning Programing</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lession 10 - Var Scope</h1>
+
+       <script>
+           //escopo de variáveis reserva a variável para estar disponivel somente para a função em que foi declarada
+           function somar(num1, num2){
+               var valor = 5;
+               return valor + num1 + num2;
+           }
+           //aplica-se somente a FUNCTION, se for declarada em blocos If, For, While ela se torna global
+           console.log(somar(4,6));
+           //na linha abaixo tentamos solicitar a variável, porém retorna erro, pois esta reservada
+           console.log(valor); //referenceError
+
+           //é possível também reservar a variável para local com o comando "let", em vez de "var"
+           //ex.:
+           for (var i = 0; i < 5; i++){
+               let uma = 12; //variável local, se fosse com "var" seria global
+               console.log(j*uma);
+           }
+            console.log(uma);
+            console.log(j);
+       </script> 
+    </body>
+</html>
